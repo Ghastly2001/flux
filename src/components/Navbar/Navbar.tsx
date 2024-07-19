@@ -3,6 +3,7 @@ import Wrapper from "../layout/Wrapper";
 import Image from "next/image";
 import { navLinks } from "@/lib/navLinks";
 import NavLink from "./NavLink";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   return (
@@ -22,7 +23,11 @@ const Navbar = () => {
             </NavLink>
           ))}
         </div>
-        {/* connect button */}
+        <div>
+          <Button variant={"secondary"} className="rounded-full">
+            Let{"'"}s Connect
+          </Button>
+        </div>
       </div>
     </Wrapper>
   );

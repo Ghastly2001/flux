@@ -1,7 +1,10 @@
+import Wrapper from "@/components/layout/Wrapper";
+import { ConnectButton } from "thirdweb/react";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      Hello
-    </main>
+    <Wrapper>
+      <main className="">index</main>
+    </Wrapper>
   );
 }
