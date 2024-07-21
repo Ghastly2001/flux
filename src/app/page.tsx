@@ -16,7 +16,6 @@ export default function Home() {
         transition={{
           duration: 0.2,
         }}
-        className="grid grid-cols-4 gap-10 mt-10"
       >
         Home
       </motion.main>
