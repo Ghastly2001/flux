@@ -9,8 +9,8 @@ interface INavLinkProps {
 const NavLink = ({ href, children }: INavLinkProps) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.07 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
       <Link href={href} className="font-medium text-sm">
