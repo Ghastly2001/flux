@@ -19,7 +19,10 @@ export default function Home() {
         className="flex flex-col items-start justify-center h-full text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight"
       >
         <span>Find biggest NFT</span>
-        <span>digital Artwork</span>
+        <div className="flex gap-2">
+          <span>digital Artwork</span>
+        </div>
+        <div className="flex gap-2"></div>
         <span> in the market</span>
       </motion.main>
     </Wrapper>
