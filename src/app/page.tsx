@@ -16,8 +16,11 @@ export default function Home() {
         transition={{
           duration: 0.2,
         }}
+        className="flex flex-col items-start justify-center h-full"
       >
-        Find biggest NFT digital Artwork in the market
+        <span>Find biggest NFT</span>
+        <span>digital Artwork</span>
+        <span> in the market</span>
       </motion.main>
     </Wrapper>
   );
