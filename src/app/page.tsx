@@ -16,7 +16,7 @@ export default function Home() {
         transition={{
           duration: 0.2,
         }}
-        className="flex flex-col items-start justify-center h-full"
+        className="flex flex-col items-start justify-center h-full text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight"
       >
         <span>Find biggest NFT</span>
         <span>digital Artwork</span>
