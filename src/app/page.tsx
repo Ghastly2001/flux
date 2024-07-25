@@ -17,7 +17,7 @@ export default function Home() {
           duration: 0.2,
         }}
       >
-        Home
+        Find biggest NFT digital Artwork in the market
       </motion.main>
     </Wrapper>
   );
