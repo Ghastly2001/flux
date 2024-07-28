@@ -19,9 +19,9 @@ export default function Home() {
         }}
         className="flex flex-col items-start justify-center h-full text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight mt-10"
       >
-        <span>Find biggest NFT</span>
+        <span>Find Biggest NFT</span>
         <div className="flex gap-2 w-full items-center">
-          <span>digital Artwork</span>
+          <span>Digital Artwork</span>
           <img
             src="/assets/verified.png"
             alt="verified"
