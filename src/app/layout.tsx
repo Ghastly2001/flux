@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import { ThirdwebProvider } from "thirdweb/react";
 import Footer from "@/components/footer/Footer";
+import { VARIANT } from "../../lib/constants";
+import "./custom-light.css";
+import "./custom-dark.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +20,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const colorMode = "dark";
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${VARIANT}-${colorMode}-bg`}>
         <Navbar />
         {children}
         <Footer />
