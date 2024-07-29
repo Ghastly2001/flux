@@ -1,12 +1,13 @@
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
-import { ThirdwebProvider } from "thirdweb/react";
-import Footer from "@/components/footer/Footer";
 import { VARIANT } from "../../lib/constants";
-import "./custom-light.css";
 import "./custom-dark.css";
+import "./custom-light.css";
+import "./globals.css";
+import { useState } from "react";
+import { ColorModeProvider } from "@/hooks/useColorMode";
 
 const inter = Inter({ subsets: ["latin"] });
 
