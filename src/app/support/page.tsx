@@ -1,7 +1,12 @@
+import Wrapper from "@/components/layout/Wrapper";
 import React from "react";
 
 const index = () => {
-  return <div>index</div>;
+  return (
+    <Wrapper>
+      <h1>Support</h1>
+    </Wrapper>
+  );
 };
 
 export default index;
