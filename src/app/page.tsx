@@ -6,24 +6,19 @@ import Image from "next/image";
 import { people } from "../../lib/constants";
 export default function Home() {
   return (
-    <Wrapper className="flex justify-start items-start  h-screen lg:pt-24 ">
-      <main className="flex flex-col items-start text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight  ">
-        <img src="/assets/bg/robot.png" alt="logo" className="h-16 w-16 z-10" />
-        <div>
-          <span>Find Biggest NFT</span>
+    <Wrapper className="flex justify-center items-start lg:pt-24 ">
+      <main className="flex flex-col items-start text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight transition-all">
+        <img
+          src="/assets/bg/robot.png"
+          alt="logo"
+          className="h-[30rem] z-10 absolute bottom-0 left-20 transition-all"
+        />
+        <div className="uppercase text-center">
+          <span>They are</span>
           <div className="flex gap-2 w-full items-center">
-            <span>Digital Artwork</span>
-            <img
-              src="/assets/verified.png"
-              alt="verified"
-              className="w-12 h-12"
-            />
-          </div>
-          <div className="flex gap-4">
-            <span>in the market</span>
-            <div className="flex flex-row items-center justify-center ">
-              <AnimatedTooltip items={people} />
-            </div>
+            <span className="tracking-wide font-extrabold text-7xl ">
+              Watching
+            </span>
           </div>
         </div>
       </main>

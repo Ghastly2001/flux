@@ -1,15 +1,13 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { VARIANT } from "../../lib/constants";
+import { Inter, Syne } from "next/font/google";
 import "./custom-dark.css";
 import "./custom-light.css";
 import "./globals.css";
-import { useState } from "react";
-import { ColorModeProvider } from "@/hooks/useColorMode";
 
 const inter = Inter({ subsets: ["latin"] });
+const syne = Syne({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +22,7 @@ export default function RootLayout({
   const colorMode = "dark";
   return (
     <html lang="en">
-      <body className={`${inter.className}  bg-hero`}>
+      <body className={`${syne.className} h-screen relative bg-hero`}>
         <Navbar />
         {children}
         <Footer />
