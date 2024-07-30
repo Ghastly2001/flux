@@ -6,8 +6,9 @@ import Image from "next/image";
 import { people } from "../../lib/constants";
 export default function Home() {
   return (
-    <Wrapper className="flex justify-start items-start  h-screen lg:pt-24">
-      <main className="flex flex-col items-start text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight">
+    <Wrapper className="flex justify-start items-start  h-screen lg:pt-24 ">
+      <main className="flex flex-col items-start text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight  ">
+        <img src="/assets/bg/robot.png" alt="logo" className="h-16 w-16 z-10" />
         <div>
           <span>Find Biggest NFT</span>
           <div className="flex gap-2 w-full items-center">

@@ -39,3 +39,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-hero {
+  background-image: url("../../public/assets/bg/Orbit.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: contrast(1.1);
+}

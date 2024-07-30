@@ -24,7 +24,7 @@ export default function RootLayout({
   const colorMode = "dark";
   return (
     <html lang="en">
-      <body className={`${inter.className} ${VARIANT}-${colorMode}-bg`}>
+      <body className={`${inter.className}  bg-hero`}>
         <Navbar />
         {children}
         <Footer />

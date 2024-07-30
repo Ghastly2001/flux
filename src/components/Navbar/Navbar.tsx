@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <Wrapper>
-      <div className="flex justify-between items-center w-full border-b border-gray-800">
+      <div className="flex justify-between items-center w-full border-b border-slate-400">
         <motion.div
           whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
           className="px-2 lg:px-4 flex gap-1 items-center cursor-pointer relative"
