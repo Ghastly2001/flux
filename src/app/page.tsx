@@ -1,7 +1,9 @@
 "use client";
 import Wrapper from "@/components/layout/Wrapper";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { people } from "../../lib/constants";
 export default function Home() {
   return (
     <Wrapper className="flex justify-start items-start  h-screen lg:pt-24">
@@ -16,8 +18,12 @@ export default function Home() {
               className="w-12 h-12"
             />
           </div>
-          <span> in the market</span>
-          <div className="flex gap-2"></div>
+          <div className="flex gap-4">
+            <span>in the market</span>
+            <div className="flex flex-row items-center justify-center ">
+              <AnimatedTooltip items={people} />
+            </div>
+          </div>
         </div>
       </main>
     </Wrapper>
