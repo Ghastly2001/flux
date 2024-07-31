@@ -22,9 +22,11 @@ export default function RootLayout({
   const colorMode = "dark";
   return (
     <html lang="en">
-      <body className={`${syne.className} h-screen relative bg-hero`}>
-        <Navbar />
-        {children}
+      <body className={`${syne.className}`}>
+        <div className="bg-hero">
+          <Navbar />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
