@@ -4,7 +4,9 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { people } from "../../lib/constants";
+import { useActiveAccount, useWalletBalance } from "thirdweb/react";
 export default function Home() {
+  const account = useActiveAccount();
   return (
     <Wrapper className="flex justify-center items-start lg:pt-24 ">
       <main className="flex flex-col items-start text-4xl lg:text-7xl font-semibold lg:font-bold tracking-tight transition-all">
@@ -21,6 +23,11 @@ export default function Home() {
             </span>
           </div>
         </div>
+        {account && account?.address && (
+          <div>
+            <p>Wallet address: {account?.address}</p>
+          </div>
+        )}
       </main>
     </Wrapper>
   );

@@ -5,6 +5,7 @@ import { Inter, Syne } from "next/font/google";
 import "./custom-dark.css";
 import "./custom-light.css";
 import "./globals.css";
+import { ThirdwebProvider } from "thirdweb/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
@@ -22,13 +23,15 @@ export default function RootLayout({
   const colorMode = "dark";
   return (
     <html lang="en">
-      <body className={`${syne.className}`}>
-        <div className="bg-hero">
-          <Navbar />
-          {children}
-        </div>
-        <Footer />
-      </body>
+      <ThirdwebProvider>
+        <body className={`${syne.className}`}>
+          <div className="bg-hero">
+            <Navbar />
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </ThirdwebProvider>
     </html>
   );
 }

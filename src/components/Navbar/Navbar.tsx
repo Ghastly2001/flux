@@ -6,6 +6,8 @@ import { navLinks } from "@/lib/navLinks";
 import NavLink from "./NavLink";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import { ConnectButton } from "thirdweb/react";
+import { client } from "@/client";
 
 const Navbar = () => {
   return (
@@ -31,9 +33,7 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <Button variant={"secondary"} className="rounded-full">
-            Let{"'"}s Connect
-          </Button>
+          <ConnectButton client={client} />
         </div>
       </div>
     </Wrapper>
