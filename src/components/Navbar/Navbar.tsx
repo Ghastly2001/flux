@@ -33,7 +33,10 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <ConnectButton client={client} />
+          <ConnectButton
+            signInButton={{ label: "Sign", className: "bg-black" }}
+            client={client}
+          />
         </div>
       </div>
     </Wrapper>
