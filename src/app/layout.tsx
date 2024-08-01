@@ -2,12 +2,11 @@ import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
+import { ThirdwebProvider } from "thirdweb/react";
 import "./custom-dark.css";
 import "./custom-light.css";
 import "./globals.css";
-import { ThirdwebProvider } from "thirdweb/react";
 
-const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const colorMode = "dark";
   return (
     <html lang="en">
       <ThirdwebProvider>
