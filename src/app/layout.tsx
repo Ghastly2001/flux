@@ -3,8 +3,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
 import { ThirdwebProvider } from "thirdweb/react";
-import "./custom-dark.css";
-import "./custom-light.css";
 import "./globals.css";
 
 const syne = Syne({ subsets: ["latin"] });
