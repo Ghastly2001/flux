@@ -23,11 +23,6 @@ export default function Home() {
             </span>
           </div>
         </div>
-        {account && account?.address && (
-          <div>
-            <p>Wallet address: {account?.address}</p>
-          </div>
-        )}
       </main>
     </Wrapper>
   );
