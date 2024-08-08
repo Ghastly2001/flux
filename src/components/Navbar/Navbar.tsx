@@ -6,8 +6,6 @@ import { navLinks } from "@/lib/navLinks";
 import NavLink from "./NavLink";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import { ConnectButton } from "thirdweb/react";
-import { client } from "@/client";
 
 const Navbar = () => {
   return (
@@ -33,10 +31,7 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <ConnectButton
-            signInButton={{ label: "Sign", className: "bg-black" }}
-            client={client}
-          />
+          <Button>Connect</Button>
         </div>
       </div>
     </Wrapper>
