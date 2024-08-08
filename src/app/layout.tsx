@@ -2,7 +2,6 @@ import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
-import { ThirdwebProvider } from "thirdweb/react";
 import "./globals.css";
 
 const syne = Syne({ subsets: ["latin"] });
@@ -19,15 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThirdwebProvider>
-        <body className={`${syne.className}`}>
-          <div className="bg-hero">
-            <Navbar />
-            {children}
-          </div>
-          <Footer />
-        </body>
-      </ThirdwebProvider>
+      <body className={`${syne.className}`}>
+        <div className="bg-hero">
+          <Navbar />
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }
