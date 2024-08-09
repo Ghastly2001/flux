@@ -1,7 +1,16 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Syne } from "next/font/google";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+import {
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  phantomWallet,
+  safeWallet,
+  rabbyWallet,
+} from "@thirdweb-dev/react";
 import "./globals.css";
 
 const syne = Syne({ subsets: ["latin"] });
@@ -18,13 +27,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.className}`}>
-        <div className="bg-hero">
-          <Navbar />
-          {children}
-        </div>
-        <Footer />
-      </body>
+      <ThirdwebProvider
+        activeChain={chain}
+        clientId={process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID!}
+        supportedWallets={[
+          metamaskWallet({ recommended: true }),
+          rabbyWallet(),
+          walletConnect(),
+          safeWallet(),
+        ]}
+        authConfig={{
+          authUrl: "/api/auth",
+          domain: "https://example.com",
+        }}
+      >
+        <body className={`${syne.className}`}>
+          <div className="bg-hero">
+            <Navbar />
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </ThirdwebProvider>
     </html>
   );
 }
