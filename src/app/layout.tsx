@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import { Syne } from "next/font/google";
 import "./globals.css";
+import { ThirdwebProvider } from "@/app/thirdweb";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -20,10 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.className}`}>
         <div className="bg-hero">
-          <Navbar />
-          {children}
+          <ThirdwebProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThirdwebProvider>
         </div>
-        <Footer />
       </body>
     </html>
   );

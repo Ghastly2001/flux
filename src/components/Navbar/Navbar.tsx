@@ -6,6 +6,7 @@ import { navLinks } from "@/lib/navLinks";
 import NavLink from "./NavLink";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import CustomConnectButton from "../connect/CustomConnectButton";
 
 const Navbar = () => {
   return (
@@ -31,7 +32,7 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <Button>Connect</Button>
+          <CustomConnectButton />
         </div>
       </div>
     </Wrapper>
