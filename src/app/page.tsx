@@ -9,7 +9,6 @@ export default function Home() {
     const { scrollY } = window;
     setScrollY(window.scrollY / 10);
   }, []);
-
   useEffect(() => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
@@ -17,23 +16,22 @@ export default function Home() {
     };
   }, []);
   return (
-    <Wrapper className="flex justify-center items-start lg:pt-24 flex-col h-[200vh] ">
-      <main>They are watching</main>
-      <Progress value={scrollY * 2} />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
-        necessitatibus esse, harum dolorem libero vero, exercitationem nesciunt
-        fugit eveniet aut nobis ducimus. Exercitationem odio earum quam, aliquam
-        mollitia nobis temporibus et sed culpa at facilis eveniet amet quibusdam
-        nulla. Fugiat, repudiandae sed laudantium esse saepe similique
-        dignissimos temporibus quidem nulla ut soluta reiciendis quos nesciunt.
-        Commodi temporibus illo aspernatur consequatur, sit ut incidunt numquam
-        in necessitatibus sed dolor cumque sequi velit? Nihil incidunt sint
-        laudantium aliquid labore minus dolor perspiciatis, reprehenderit soluta
-        harum eaque. Velit eos blanditiis, aperiam laboriosam culpa corporis
-        quis libero praesentium, debitis, cumque officia cupiditate doloremque
-        cum.
-      </p>
+    <Wrapper className="flex justify-between lg:pt-24 flex-col items-center h-[91vh] ">
+      <div className="flex justify-center flex-col w-full mt-16">
+        <main className="flex justify-between items-center flex-wrap">
+          <div className="flex flex-col w-1/2">
+            <h1 className="text-7xl font-extrabold text-slate-50">
+              Buy, Sell your Fav. NFT's
+            </h1>
+            <p className="text-lg font-medium text-foreground">
+              Connect with the community, trade crypto among each other. Play
+              Quests and earn FluxDot tokens.
+            </p>
+          </div>
+          <div>right</div>
+        </main>
+      </div>
+      <div>Swipe to show</div>
     </Wrapper>
   );
 }
