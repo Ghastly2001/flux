@@ -23,10 +23,7 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "@thirdweb-dev/auth": "4.1.35",
-    "@thirdweb-dev/react": "4.4.11",
-    "@thirdweb-dev/sdk": "4.0.38",
-    "viem": "^2.19.3"
+    "thirdweb": "^5.45.0"
   },
   "devDependencies": {
     "@types/node": "^20",
