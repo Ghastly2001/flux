@@ -4,7 +4,7 @@ import { chain, client } from "../../../utils/constants";
 
 const CustomConnectButton = () => {
   return (
-    <div>
+    <div className="py-2">
       <ConnectButton
         client={client}
         chain={chain}
