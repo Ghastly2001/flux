@@ -16,10 +16,10 @@ export default function Home() {
     };
   }, []);
   return (
-    <Wrapper className="flex justify-between lg:pt-24 flex-col items-center h-[91vh] ">
-      <div className="flex justify-center flex-col w-full mt-16">
+    <div className="flex justify-between flex-col items-center h-[91vh] bg-hero">
+      <div className="flex justify-center flex-col w-full lg:pt-12 lg:px-20">
         <main className="flex justify-between items-center flex-wrap">
-          <div className="flex flex-col w-1/2">
+          <div className="flex flex-col w-1/2 justify-center items-center">
             <h1 className="text-7xl font-extrabold text-slate-50">
               Buy, Sell your Fav. NFT's
             </h1>
@@ -28,10 +28,19 @@ export default function Home() {
               Quests and earn FluxDot tokens.
             </p>
           </div>
-          <div>right</div>
+          <div className="flex flex-col mb-8 justify-center items-center">
+            <img
+              src="/assets/hero-image.png"
+              className="h-full w-full"
+              alt="mountain"
+            />
+            <Progress
+              value={scrollY}
+              className="w-1/2 backdrop-blur-sm bg-transparent"
+            />
+          </div>
         </main>
       </div>
-      <div>Swipe to show</div>
-    </Wrapper>
+    </div>
   );
 }

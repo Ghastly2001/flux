@@ -21,10 +21,7 @@ const Wrapper = ({ children, className }: TWrapper) => {
       transition={{
         duration: 0.25,
       }}
-      className={cn(
-        " mx-auto w-full max-w-screen-xl px-2.5 md:px-20",
-        className
-      )}
+      className={cn(" mx-auto w-full max-w-screen-xl ", className)}
     >
       {children}
     </motion.div>
