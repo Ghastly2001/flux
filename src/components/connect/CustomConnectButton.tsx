@@ -22,6 +22,9 @@ const CustomConnectButton = () => {
           titleIcon: "",
           showThirdwebBranding: false,
         }}
+        signInButton={{
+          label: "Sign In",
+        }}
       />
     </div>
   );

@@ -10,7 +10,7 @@ import CustomConnectButton from "../connect/CustomConnectButton";
 
 const Navbar = () => {
   return (
-    <Wrapper>
+    <Wrapper className="z-[100]">
       <div className="flex justify-between items-center w-full border-b border-slate-400">
         <motion.div
           whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}

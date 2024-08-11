@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.className}`}>
-        <div className="bg-hero">
+        <div className="bg-slate-900">
           <ThirdwebProvider>
             <Navbar />
             {children}
