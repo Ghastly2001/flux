@@ -1,12 +1,13 @@
 "use client";
 import { Progress } from "@/components/ui/progress";
 import { MoveDownIcon } from "lucide-react";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 export default function Home() {
-  const [scrollY, setScrollY] = useState<number>(0);
+  const [scrollY, setScrollY] = useState<number>(10);
   const onScroll = useCallback((event: any) => {
     const { scrollY } = window;
-    setScrollY(window.scrollY / 10);
+    setScrollY(window.scrollY / 10 + 10);
   }, []);
   useEffect(() => {
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -15,35 +16,37 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className="flex justify-between flex-col items-center h-[91vh] bg-hero">
-      <div className="flex justify-center flex-col w-full lg:pt-12 lg:px-20">
-        <main className="flex justify-between items-center ">
-          <div className="flex flex-col w-1/2 justify-center items-center">
-            <h1 className="text-7xl font-extrabold text-slate-50">
-              Buy, Sell your Fav. NFT's
+    <section className="w-full pt-4 md:pt-8 lg:pt-16">
+      <div className="container grid gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-16 xl:gap-24">
+        <div className="flex flex-col justify-center space-y-6">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+              Unlock the Power of Web3 Staking
             </h1>
-            <p className="text-lg font-medium text-foreground">
-              Connect with the community, trade crypto among each other. Play
-              Quests and earn FluxDot tokens.
+            <p className="max-w-[600px] text-muted-foreground md:text-xl">
+              Earn passive income by staking your crypto assets on our secure
+              and user-friendly platform.
             </p>
           </div>
-          <div className="flex flex-col mb-8 justify-center items-center">
-            <img
-              src="/assets/hero-image.png"
-              className="h-full w-full"
-              alt="mountain"
-            />
-            <Progress
-              value={scrollY}
-              className="w-1/2 backdrop-blur-sm bg-transparent"
-            />
-          </div>
-        </main>
+          <Link
+            href="#"
+            className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+          >
+            Start Staking
+          </Link>
+        </div>
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#ff6b6b] to-[#ffa500] rounded-xl opacity-50 blur-3xl" />
+          <img
+            src="/placeholder.svg"
+            width="600"
+            height="500"
+            alt="Web3 Staking"
+            className="mx-auto aspect-[3/2] overflow-hidden rounded-xl object-contain sm:w-full relative z-10"
+          />
+        </div>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <h1>Let's Go</h1>
-        <MoveDownIcon className="animate-bounce" />
-      </div>
-    </div>
+    </section>
   );
 }
