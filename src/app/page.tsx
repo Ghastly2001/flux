@@ -21,7 +21,7 @@ export default function Home() {
         <div className="flex flex-col justify-center space-y-6">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              Unlock the Power of Web3 Staking
+              Unlock the Power of Web3 in Staking
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
               Earn passive income by staking your crypto assets on our secure
@@ -33,7 +33,7 @@ export default function Home() {
             className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
-            Start Staking
+            Start Staking here
           </Link>
         </div>
         <div className="relative">
