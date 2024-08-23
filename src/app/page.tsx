@@ -39,7 +39,7 @@ export default function Home() {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-br from-[#ff6b6b] to-[#ffa500] rounded-xl opacity-50 blur-3xl" />
           <img
-            src="/placeholder.svg"
+            src="/assets/bg/Gradients.png"
             width="600"
             height="500"
             alt="Web3 Staking"
