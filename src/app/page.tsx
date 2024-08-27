@@ -23,7 +23,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
               Unlock the Power of Web3 in Staking
             </h1>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl">
+            <p className="max-w-[700px] text-muted-foreground md:text-xl">
               Earn passive income by staking your crypto assets on our secure
               and user-friendly platform.
             </p>
